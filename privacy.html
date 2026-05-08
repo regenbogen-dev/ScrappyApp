@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrappy - プライバシーポリシー</title>
+    <style>
+        :root {
+            --primary: #5856D6;
+            --bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --border: #E5E5EA;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1C1C1E;
+                --card-bg: #2C2C2E;
+                --text: #F5F5F7;
+                --text-secondary: #98989D;
+                --border: #38383A;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary), #7B61FF);
+            color: #fff;
+            text-align: center;
+            padding: 48px 20px 32px;
+        }
+        .hero h1 { font-size: 1.8em; }
+        .container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        .card p, .card li {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        .card ul { padding-left: 20px; }
+        .card li { margin-bottom: 4px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+        th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+        }
+        td { color: var(--text-secondary); }
+        .back-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 0.9em;
+        }
+        .back-link:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 0.8em;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🔒 プライバシーポリシー</h1>
+    <p>Scrappy — スクリーンショット自動整理アプリ</p>
+</div>
+
+<div class="container">
+    <a class="back-link" href="index.html">← サポートページに戻る</a>
+
+    <div class="card">
+        <h2>基本方針</h2>
+        <p>Scrappy（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本アプリは<strong>一切のデータを外部サーバーに送信しません</strong>。すべての処理はお使いの端末内で完結します。</p>
+        <p>最終更新日: 2026年5月8日</p>
+    </div>
+
+    <div class="card">
+        <h2>1. 収集する情報</h2>
+        <p>本アプリは、以下の情報に端末上でのみアクセスします。外部への送信・収集は行いません。</p>
+        <table>
+            <tr>
+                <th>データ</th>
+                <th>用途</th>
+                <th>外部送信</th>
+            </tr>
+            <tr>
+                <td>スクリーンショット画像</td>
+                <td>OCRテキスト認識による自動分類</td>
+                <td>なし</td>
+            </tr>
+            <tr>
+                <td>写真メタデータ（撮影日時）</td>
+                <td>古いスクショの検出・時間帯による分類</td>
+                <td>なし</td>
+            </tr>
+            <tr>
+                <td>ユーザー設定（分類ルール・日数）</td>
+                <td>アプリの動作カスタマイズ</td>
+                <td>なし</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>2. 写真ライブラリへのアクセス</h2>
+        <p>本アプリは、スクリーンショットの読み取りおよび削除のため、iOS標準の写真ライブラリアクセス権限を使用します。</p>
+        <ul>
+            <li>アクセスは初回起動時にユーザーの明示的な許可を得て行います</li>
+            <li>写真データは端末内でのみ処理され、コピー・キャッシュ・アップロードは行いません</li>
+            <li>削除操作は必ず確認ダイアログを表示し、誤操作を防止します</li>
+            <li>削除されたスクショはiOS標準の「最近削除した項目」に30日間保持されます</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>3. データの保存</h2>
+        <p>本アプリが保存するデータは以下のみです。すべて端末内のUserDefaultsに保存され、外部と共有されることはありません。</p>
+        <ul>
+            <li>整理提案の日数設定（デフォルト: 30日）</li>
+            <li>カスタム分類ルール（キーワードとカテゴリの組み合わせ）</li>
+        </ul>
+        <p>分類結果（カテゴリ情報）はメモリ上のみで管理され、永続的に保存されません。</p>
+    </div>
+
+    <div class="card">
+        <h2>4. 外部サービス・SDK</h2>
+        <p>本アプリは以下を使用しません。</p>
+        <ul>
+            <li>サードパーティ分析ツール（Firebase, Amplitude等）</li>
+            <li>広告SDK</li>
+            <li>トラッキングツール（ATT対象外）</li>
+            <li>クラウドストレージ（iCloud同期含む）</li>
+            <li>外部API・サーバー通信</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>5. Apple Intelligence</h2>
+        <p>Apple Intelligence対応端末では、Appleが提供するon-device画像理解機能を利用して高精度な分類を行います。この処理もすべて端末内で完結し、Appleのサーバーにデータが送信されることはありません。</p>
+    </div>
+
+    <div class="card">
+        <h2>6. 子供のプライバシー</h2>
+        <p>本アプリは13歳未満の子供から個人情報を意図的に収集することはありません。そもそもいかなるユーザーからも個人情報を収集しません。</p>
+    </div>
+
+    <div class="card">
+        <h2>7. プライバシーポリシーの変更</h2>
+        <p>本ポリシーは必要に応じて更新される場合があります。重要な変更がある場合は、本ページにて通知します。</p>
+    </div>
+
+    <div class="card">
+        <h2>8. お問い合わせ</h2>
+        <p>プライバシーに関するご質問・ご懸念がございましたら、以下までご連絡ください。</p>
+        <p><strong>メール:</strong> <a href="mailto:your-email@example.com" style="color: var(--primary);">your-email@example.com</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Scrappy. All rights reserved.</p>
+    <p><a href="index.html" style="color: var(--primary);">サポートページ</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrappy - サポート</title>
+    <style>
+        :root {
+            --primary: #5856D6;
+            --primary-light: #7B61FF;
+            --bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --border: #E5E5EA;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1C1C1E;
+                --card-bg: #2C2C2E;
+                --text: #F5F5F7;
+                --text-secondary: #98989D;
+                --border: #38383A;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .hero h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 8px; }
+        .hero p { font-size: 1.1em; opacity: 0.9; }
+        .container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .card h2 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+        .card h3 {
+            font-size: 1.05em;
+            margin: 16px 0 8px;
+        }
+        .card p, .card li {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+        }
+        .card ul { padding-left: 20px; }
+        .card li { margin-bottom: 6px; }
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.75em;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .faq-item { margin-bottom: 16px; }
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 0;
+            list-style: none;
+        }
+        .faq-item summary::before { content: "Q. "; color: var(--primary); }
+        .faq-item p { padding: 4px 0 0 24px; }
+        .contact-link {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        .contact-link:hover { opacity: 0.85; }
+        nav { text-align: center; padding: 12px 0; }
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 0.9em;
+        }
+        nav a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 0.8em;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>✂️ Scrappy</h1>
+    <p>スクリーンショット自動整理アプリ</p>
+</div>
+
+<nav>
+    <a href="#features">機能紹介</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+</nav>
+
+<div class="container">
+
+    <!-- アプリ紹介 -->
+    <div class="card" id="about">
+        <h2>Scrappy について</h2>
+        <p>Scrappyは、iPhoneに溜まり続けるスクリーンショットをAIとOCRで自動分類し、古いスクショの一括削除を提案してストレージを節約するアプリです。</p>
+        <ul>
+            <li>すべての解析は端末内で完結（外部通信なし）</li>
+            <li>広告なし・トラッキングなし</li>
+            <li>日本語 / English 対応</li>
+        </ul>
+    </div>
+
+    <!-- 機能紹介 -->
+    <div class="card" id="features">
+        <h2>主な機能</h2>
+
+        <h3>🤖 AI自動分類 <span class="badge">Apple Intelligence対応</span></h3>
+        <p>OCRテキスト認識とキーワードマッチングでスクショを10カテゴリに自動分類。Apple Intelligence対応端末（iPhone 15 Pro以降）ではさらに高精度な分類が可能です。</p>
+
+        <h3>📂 10カテゴリで整理</h3>
+        <p>SNS・仕事・買い物候補・エンタメ・参考資料・会話・レシート・地図・その他・未分類の10カテゴリに自動仕分け。</p>
+
+        <h3>🧹 スマート整理提案</h3>
+        <p>設定した日数を超えた古いスクショを自動検出し、一括削除を提案。ストレージ使用量もひと目で確認できます。</p>
+
+        <h3>⚙️ カスタムルール</h3>
+        <p>独自のキーワードとカテゴリの組み合わせを追加して、あなたの使い方に合った分類ルールを設定できます。</p>
+    </div>
+
+    <!-- 動作環境 -->
+    <div class="card">
+        <h2>動作環境</h2>
+        <ul>
+            <li>iOS 17.0 以降</li>
+            <li>iPhone / iPad 対応</li>
+            <li>Apple Intelligence分類: iPhone 15 Pro / iPad (M1以降) が必要</li>
+            <li>非対応端末ではOCR分類で動作します</li>
+        </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card" id="faq">
+        <h2>よくある質問</h2>
+
+        <details class="faq-item">
+            <summary>写真ライブラリへのアクセス許可が必要ですか？</summary>
+            <p>はい。スクリーンショットの読み取りと削除のため、写真ライブラリへのアクセス許可が必要です。Scrappyは写真データを外部に送信することは一切ありません。</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>分類が正しくない場合は？</summary>
+            <p>設定画面から分類ルールのキーワードを追加・調整してください。再度「自動分類を実行」すると新しいルールが反映されます。</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>削除したスクショは復元できますか？</summary>
+            <p>はい。削除されたスクショはiOS標準の「写真」アプリ →「最近削除した項目」に30日間保持されます。その間であれば復元可能です。</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>データは外部に送信されますか？</summary>
+            <p>いいえ。すべての画像解析（OCR・AI分類）は端末内で完結します。サーバーへの通信は一切行いません。</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Apple Intelligenceに対応していない端末ではどうなりますか？</summary>
+            <p>従来のOCR（テキスト認識）+ キーワードマッチングで分類を行います。機能は同じで、精度のみが異なります。</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>対応言語は？</summary>
+            <p>日本語と英語に対応しています。端末の言語設定に応じて自動的に切り替わります。</p>
+        </details>
+    </div>
+
+    <!-- お問い合わせ -->
+    <div class="card" id="contact">
+        <h2>お問い合わせ・サポート</h2>
+        <p>バグ報告・機能リクエスト・その他ご質問がございましたら、以下よりお問い合わせください。</p>
+        <a class="contact-link" href="mailto:your-email@example.com">📧 メールで問い合わせ</a>
+        <p style="margin-top: 16px; font-size: 0.85em;">
+            ※ 通常2営業日以内にご返信いたします。
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Scrappy. All rights reserved.</p>
+    <p><a href="privacy.html" style="color: var(--primary);">プライバシーポリシー</a></p>
+</footer>
+
+</body>
+</html>
