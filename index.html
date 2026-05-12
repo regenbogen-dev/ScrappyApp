@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrappy - サポート</title>
+    <title>Scrappy - サポート / Support</title>
     <style>
         :root {
             --primary: #5856D6;
@@ -105,105 +105,206 @@
             font-size: 0.8em;
             color: var(--text-secondary);
         }
+        .lang-switch {
+            text-align: center;
+            padding: 10px 0 0;
+        }
+        .lang-switch button {
+            background: none;
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            padding: 5px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .lang-switch button:hover { background: var(--primary); color: #fff; }
+        [lang="en"] { display: none; }
     </style>
 </head>
 <body>
 
 <div class="hero">
     <h1>✂️ Scrappy</h1>
-    <p>スクリーンショット自動整理アプリ</p>
+    <p lang="ja">スクリーンショット自動整理アプリ</p>
+    <p lang="en">Auto-Organize Your Screenshots</p>
+</div>
+
+<div class="lang-switch">
+    <button onclick="toggleLang()">English / 日本語</button>
 </div>
 
 <nav>
-    <a href="#features">機能紹介</a>
-    <a href="#faq">よくある質問</a>
-    <a href="#contact">お問い合わせ</a>
-    <a href="privacy.html">プライバシーポリシー</a>
+    <span lang="ja">
+        <a href="#features">機能紹介</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </span>
+    <span lang="en">
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </span>
 </nav>
 
 <div class="container">
 
-    <!-- アプリ紹介 -->
+    <!-- アプリ紹介 / About -->
     <div class="card" id="about">
-        <h2>Scrappy について</h2>
-        <p>Scrappyは、iPhoneに溜まり続けるスクリーンショットをAIとOCRで自動分類し、古いスクショの一括削除を提案してストレージを節約するアプリです。</p>
-        <ul>
+        <h2 lang="ja">Scrappy について</h2>
+        <h2 lang="en">About Scrappy</h2>
+        <p lang="ja">Scrappyは、iPhoneに溜まり続けるスクリーンショットをAIとOCRで自動分類し、古いスクショの一括削除を提案してストレージを節約するアプリです。</p>
+        <p lang="en">Scrappy automatically classifies your ever-growing screenshots using AI and OCR, and suggests bulk deletion of old screenshots to save storage.</p>
+        <ul lang="ja">
             <li>すべての解析は端末内で完結（外部通信なし）</li>
             <li>広告なし・トラッキングなし</li>
             <li>日本語 / English 対応</li>
         </ul>
+        <ul lang="en">
+            <li>All processing happens on-device (no external communication)</li>
+            <li>No ads, no tracking</li>
+            <li>Supports Japanese / English</li>
+        </ul>
     </div>
 
-    <!-- 機能紹介 -->
+    <!-- 機能紹介 / Features -->
     <div class="card" id="features">
-        <h2>主な機能</h2>
+        <h2 lang="ja">主な機能</h2>
+        <h2 lang="en">Key Features</h2>
 
-        <h3>🤖 AI自動分類 <span class="badge">Apple Intelligence対応</span></h3>
-        <p>OCRテキスト認識とキーワードマッチングでスクショを10カテゴリに自動分類。Apple Intelligence対応端末（iPhone 15 Pro以降）ではさらに高精度な分類が可能です。</p>
+        <div lang="ja">
+            <h3>🤖 AI自動分類 <span class="badge">Apple Intelligence対応</span></h3>
+            <p>OCRテキスト認識とキーワードマッチングでスクショを10カテゴリに自動分類。Apple Intelligence対応端末（iPhone 15 Pro以降）ではさらに高精度な分類が可能です。</p>
 
-        <h3>📂 10カテゴリで整理</h3>
-        <p>SNS・仕事・買い物候補・エンタメ・参考資料・会話・レシート・地図・その他・未分類の10カテゴリに自動仕分け。</p>
+            <h3>📂 10カテゴリで整理</h3>
+            <p>SNS・仕事・買い物候補・エンタメ・参考資料・会話・レシート・地図・その他・未分類の10カテゴリに自動仕分け。</p>
 
-        <h3>🧹 スマート整理提案</h3>
-        <p>設定した日数を超えた古いスクショを自動検出し、一括削除を提案。ストレージ使用量もひと目で確認できます。</p>
+            <h3>🧹 スマート整理提案</h3>
+            <p>設定した日数を超えた古いスクショを自動検出し、一括削除を提案。ストレージ使用量もひと目で確認できます。</p>
 
-        <h3>⚙️ カスタムルール</h3>
-        <p>独自のキーワードとカテゴリの組み合わせを追加して、あなたの使い方に合った分類ルールを設定できます。</p>
+            <h3>⚙️ カスタムルール</h3>
+            <p>独自のキーワードとカテゴリの組み合わせを追加して、あなたの使い方に合った分類ルールを設定できます。</p>
+        </div>
+
+        <div lang="en">
+            <h3>🤖 AI Auto-Classification <span class="badge">Apple Intelligence</span></h3>
+            <p>Automatically classifies screenshots into 10 categories using OCR text recognition and keyword matching. Even more accurate on Apple Intelligence devices (iPhone 15 Pro and later).</p>
+
+            <h3>📂 10 Categories</h3>
+            <p>Auto-sorted into SNS, Work, Shopping, Entertainment, Reference, Conversation, Receipt, Map, Other, and Uncategorized.</p>
+
+            <h3>🧹 Smart Cleanup Suggestions</h3>
+            <p>Automatically detects old screenshots beyond your set threshold and suggests bulk deletion. See storage usage at a glance.</p>
+
+            <h3>⚙️ Custom Rules</h3>
+            <p>Add your own keyword-category combinations to create classification rules that fit your workflow.</p>
+        </div>
     </div>
 
-    <!-- 動作環境 -->
+    <!-- 動作環境 / Requirements -->
     <div class="card">
-        <h2>動作環境</h2>
-        <ul>
+        <h2 lang="ja">動作環境</h2>
+        <h2 lang="en">Requirements</h2>
+        <ul lang="ja">
             <li>iOS 17.0 以降</li>
             <li>iPhone / iPad 対応</li>
             <li>Apple Intelligence分類: iPhone 15 Pro / iPad (M1以降) が必要</li>
             <li>非対応端末ではOCR分類で動作します</li>
         </ul>
+        <ul lang="en">
+            <li>iOS 17.0 or later</li>
+            <li>iPhone / iPad supported</li>
+            <li>Apple Intelligence: Requires iPhone 15 Pro / iPad (M1 or later)</li>
+            <li>Falls back to OCR classification on unsupported devices</li>
+        </ul>
     </div>
 
     <!-- FAQ -->
     <div class="card" id="faq">
-        <h2>よくある質問</h2>
+        <h2 lang="ja">よくある質問</h2>
+        <h2 lang="en">FAQ</h2>
 
-        <details class="faq-item">
-            <summary>写真ライブラリへのアクセス許可が必要ですか？</summary>
-            <p>はい。スクリーンショットの読み取りと削除のため、写真ライブラリへのアクセス許可が必要です。Scrappyは写真データを外部に送信することは一切ありません。</p>
-        </details>
+        <div lang="ja">
+            <details class="faq-item">
+                <summary>写真ライブラリへのアクセス許可が必要ですか？</summary>
+                <p>はい。スクリーンショットの読み取りと削除のため、写真ライブラリへのアクセス許可が必要です。Scrappyは写真データを外部に送信することは一切ありません。</p>
+            </details>
 
-        <details class="faq-item">
-            <summary>分類が正しくない場合は？</summary>
-            <p>設定画面から分類ルールのキーワードを追加・調整してください。再度「自動分類を実行」すると新しいルールが反映されます。</p>
-        </details>
+            <details class="faq-item">
+                <summary>分類が正しくない場合は？</summary>
+                <p>設定画面から分類ルールのキーワードを追加・調整してください。再度「自動分類を実行」すると新しいルールが反映されます。</p>
+            </details>
 
-        <details class="faq-item">
-            <summary>削除したスクショは復元できますか？</summary>
-            <p>はい。削除されたスクショはiOS標準の「写真」アプリ →「最近削除した項目」に30日間保持されます。その間であれば復元可能です。</p>
-        </details>
+            <details class="faq-item">
+                <summary>削除したスクショは復元できますか？</summary>
+                <p>はい。削除されたスクショはiOS標準の「写真」アプリ →「最近削除した項目」に30日間保持されます。その間であれば復元可能です。</p>
+            </details>
 
-        <details class="faq-item">
-            <summary>データは外部に送信されますか？</summary>
-            <p>いいえ。すべての画像解析（OCR・AI分類）は端末内で完結します。サーバーへの通信は一切行いません。</p>
-        </details>
+            <details class="faq-item">
+                <summary>データは外部に送信されますか？</summary>
+                <p>いいえ。すべての画像解析（OCR・AI分類）は端末内で完結します。サーバーへの通信は一切行いません。</p>
+            </details>
 
-        <details class="faq-item">
-            <summary>Apple Intelligenceに対応していない端末ではどうなりますか？</summary>
-            <p>従来のOCR（テキスト認識）+ キーワードマッチングで分類を行います。機能は同じで、精度のみが異なります。</p>
-        </details>
+            <details class="faq-item">
+                <summary>Apple Intelligenceに対応していない端末ではどうなりますか？</summary>
+                <p>従来のOCR（テキスト認識）+ キーワードマッチングで分類を行います。機能は同じで、精度のみが異なります。</p>
+            </details>
 
-        <details class="faq-item">
-            <summary>対応言語は？</summary>
-            <p>日本語と英語に対応しています。端末の言語設定に応じて自動的に切り替わります。</p>
-        </details>
+            <details class="faq-item">
+                <summary>対応言語は？</summary>
+                <p>日本語と英語に対応しています。端末の言語設定に応じて自動的に切り替わります。</p>
+            </details>
+        </div>
+
+        <div lang="en">
+            <details class="faq-item">
+                <summary>Does it need Photo Library access?</summary>
+                <p>Yes. Photo Library access is required to read and delete screenshots. Scrappy never sends your photo data to any external server.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What if a screenshot is classified incorrectly?</summary>
+                <p>You can add or adjust keywords in the classification rules from Settings. Run "Auto-Classify" again to apply the updated rules.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I restore deleted screenshots?</summary>
+                <p>Yes. Deleted screenshots are kept in the iOS Photos app under "Recently Deleted" for 30 days and can be restored during that period.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Is any data sent externally?</summary>
+                <p>No. All image analysis (OCR and AI classification) is performed entirely on your device. There is no server communication whatsoever.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What happens on devices without Apple Intelligence?</summary>
+                <p>The app uses traditional OCR (text recognition) plus keyword matching. All features work the same — only accuracy differs.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What languages are supported?</summary>
+                <p>Japanese and English. The app automatically switches based on your device language setting.</p>
+            </details>
+        </div>
     </div>
 
-    <!-- お問い合わせ -->
+    <!-- お問い合わせ / Contact -->
     <div class="card" id="contact">
-        <h2>お問い合わせ・サポート</h2>
-        <p>バグ報告・機能リクエスト・その他ご質問がございましたら、以下よりお問い合わせください。</p>
-        <a class="contact-link" href="mailto:your-email@example.com">📧 メールで問い合わせ</a>
-        <p style="margin-top: 16px; font-size: 0.85em;">
+        <h2 lang="ja">お問い合わせ・サポート</h2>
+        <h2 lang="en">Contact & Support</h2>
+        <p lang="ja">バグ報告・機能リクエスト・その他ご質問がございましたら、以下よりお問い合わせください。</p>
+        <p lang="en">For bug reports, feature requests, or any questions, please contact us below.</p>
+        <a class="contact-link" href="mailto:your-email@example.com" lang="ja">📧 メールで問い合わせ</a>
+        <a class="contact-link" href="mailto:your-email@example.com" lang="en">📧 Contact via Email</a>
+        <p style="margin-top: 16px; font-size: 0.85em;" lang="ja">
             ※ 通常2営業日以内にご返信いたします。
+        </p>
+        <p style="margin-top: 16px; font-size: 0.85em;" lang="en">
+            We typically respond within 2 business days.
         </p>
     </div>
 
@@ -211,8 +312,24 @@
 
 <footer>
     <p>&copy; 2026 Scrappy. All rights reserved.</p>
-    <p><a href="privacy.html" style="color: var(--primary);">プライバシーポリシー</a></p>
+    <p lang="ja"><a href="privacy.html" style="color: var(--primary);">プライバシーポリシー</a></p>
+    <p lang="en"><a href="privacy.html" style="color: var(--primary);">Privacy Policy</a></p>
 </footer>
+
+<script>
+    function toggleLang() {
+        const jaEls = document.querySelectorAll('[lang="ja"]');
+        const enEls = document.querySelectorAll('[lang="en"]');
+        const isJa = jaEls[0].style.display !== 'none';
+        jaEls.forEach(el => el.style.display = isJa ? 'none' : '');
+        enEls.forEach(el => el.style.display = isJa ? '' : 'none');
+        document.documentElement.lang = isJa ? 'en' : 'ja';
+    }
+    // Auto-detect browser language
+    if (!navigator.language.startsWith('ja')) {
+        toggleLang();
+    }
+</script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrappy - プライバシーポリシー</title>
+    <title>Scrappy - プライバシーポリシー / Privacy Policy</title>
     <style>
         :root {
             --primary: #5856D6;
@@ -87,28 +87,57 @@
             font-size: 0.8em;
             color: var(--text-secondary);
         }
+        .lang-switch {
+            text-align: center;
+            padding: 10px 0 0;
+        }
+        .lang-switch button {
+            background: none;
+            border: 1.5px solid #fff;
+            color: #fff;
+            padding: 5px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .lang-switch button:hover { background: rgba(255,255,255,0.2); }
+        [lang="en"] { display: none; }
     </style>
 </head>
 <body>
 
 <div class="hero">
-    <h1>🔒 プライバシーポリシー</h1>
-    <p>Scrappy — スクリーンショット自動整理アプリ</p>
+    <h1 lang="ja">🔒 プライバシーポリシー</h1>
+    <h1 lang="en">🔒 Privacy Policy</h1>
+    <p lang="ja">Scrappy — スクリーンショット自動整理アプリ</p>
+    <p lang="en">Scrappy — Auto Screenshot Organizer</p>
+    <div class="lang-switch">
+        <button onclick="toggleLang()">English / 日本語</button>
+    </div>
 </div>
 
 <div class="container">
-    <a class="back-link" href="index.html">← サポートページに戻る</a>
+    <a class="back-link" href="index.html" lang="ja">← サポートページに戻る</a>
+    <a class="back-link" href="index.html" lang="en">← Back to Support</a>
 
+    <!-- 基本方針 / Overview -->
     <div class="card">
-        <h2>基本方針</h2>
-        <p>Scrappy（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本アプリは<strong>一切のデータを外部サーバーに送信しません</strong>。すべての処理はお使いの端末内で完結します。</p>
-        <p>最終更新日: 2026年5月8日</p>
+        <h2 lang="ja">基本方針</h2>
+        <h2 lang="en">Overview</h2>
+        <p lang="ja">Scrappy（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本アプリは<strong>一切のデータを外部サーバーに送信しません</strong>。すべての処理はお使いの端末内で完結します。</p>
+        <p lang="en">Scrappy (the "App") is designed with your privacy as the top priority. The App <strong>does not send any data to external servers</strong>. All processing is performed entirely on your device.</p>
+        <p lang="ja">最終更新日: 2026年5月8日</p>
+        <p lang="en">Last updated: May 8, 2026</p>
     </div>
 
+    <!-- 1. 収集する情報 / Information Accessed -->
     <div class="card">
-        <h2>1. 収集する情報</h2>
-        <p>本アプリは、以下の情報に端末上でのみアクセスします。外部への送信・収集は行いません。</p>
-        <table>
+        <h2 lang="ja">1. 収集する情報</h2>
+        <h2 lang="en">1. Information Accessed</h2>
+        <p lang="ja">本アプリは、以下の情報に端末上でのみアクセスします。外部への送信・収集は行いません。</p>
+        <p lang="en">The App accesses the following information on-device only. No data is sent or collected externally.</p>
+        <table lang="ja">
             <tr>
                 <th>データ</th>
                 <th>用途</th>
@@ -130,67 +159,142 @@
                 <td>なし</td>
             </tr>
         </table>
+        <table lang="en">
+            <tr>
+                <th>Data</th>
+                <th>Purpose</th>
+                <th>Sent Externally</th>
+            </tr>
+            <tr>
+                <td>Screenshot images</td>
+                <td>OCR text recognition for auto-classification</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Photo metadata (capture date)</td>
+                <td>Detecting old screenshots / time-based sorting</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>User settings (rules, days)</td>
+                <td>App behavior customization</td>
+                <td>No</td>
+            </tr>
+        </table>
     </div>
 
+    <!-- 2. 写真ライブラリへのアクセス / Photo Library Access -->
     <div class="card">
-        <h2>2. 写真ライブラリへのアクセス</h2>
-        <p>本アプリは、スクリーンショットの読み取りおよび削除のため、iOS標準の写真ライブラリアクセス権限を使用します。</p>
-        <ul>
+        <h2 lang="ja">2. 写真ライブラリへのアクセス</h2>
+        <h2 lang="en">2. Photo Library Access</h2>
+        <p lang="ja">本アプリは、スクリーンショットの読み取りおよび削除のため、iOS標準の写真ライブラリアクセス権限を使用します。</p>
+        <p lang="en">The App uses standard iOS Photo Library access to read and delete screenshots.</p>
+        <ul lang="ja">
             <li>アクセスは初回起動時にユーザーの明示的な許可を得て行います</li>
             <li>写真データは端末内でのみ処理され、コピー・キャッシュ・アップロードは行いません</li>
             <li>削除操作は必ず確認ダイアログを表示し、誤操作を防止します</li>
             <li>削除されたスクショはiOS標準の「最近削除した項目」に30日間保持されます</li>
         </ul>
+        <ul lang="en">
+            <li>Access is granted only with your explicit permission on first launch</li>
+            <li>Photo data is processed on-device only — no copying, caching, or uploading</li>
+            <li>Deletion always requires a confirmation dialog to prevent accidental loss</li>
+            <li>Deleted screenshots are kept in iOS "Recently Deleted" for 30 days</li>
+        </ul>
     </div>
 
+    <!-- 3. データの保存 / Data Storage -->
     <div class="card">
-        <h2>3. データの保存</h2>
-        <p>本アプリが保存するデータは以下のみです。すべて端末内のUserDefaultsに保存され、外部と共有されることはありません。</p>
-        <ul>
+        <h2 lang="ja">3. データの保存</h2>
+        <h2 lang="en">3. Data Storage</h2>
+        <p lang="ja">本アプリが保存するデータは以下のみです。すべて端末内のUserDefaultsに保存され、外部と共有されることはありません。</p>
+        <p lang="en">The App stores only the following data in on-device UserDefaults. None of it is shared externally.</p>
+        <ul lang="ja">
             <li>整理提案の日数設定（デフォルト: 30日）</li>
             <li>カスタム分類ルール（キーワードとカテゴリの組み合わせ）</li>
         </ul>
-        <p>分類結果（カテゴリ情報）はメモリ上のみで管理され、永続的に保存されません。</p>
+        <ul lang="en">
+            <li>Cleanup threshold setting (default: 30 days)</li>
+            <li>Custom classification rules (keyword-category pairs)</li>
+        </ul>
+        <p lang="ja">分類結果（カテゴリ情報）はメモリ上のみで管理され、永続的に保存されません。</p>
+        <p lang="en">Classification results (category assignments) are held in memory only and are not persisted.</p>
     </div>
 
+    <!-- 4. 外部サービス・SDK / Third-Party Services -->
     <div class="card">
-        <h2>4. 外部サービス・SDK</h2>
-        <p>本アプリは以下を使用しません。</p>
-        <ul>
+        <h2 lang="ja">4. 外部サービス・SDK</h2>
+        <h2 lang="en">4. Third-Party Services & SDKs</h2>
+        <p lang="ja">本アプリは以下を使用しません。</p>
+        <p lang="en">The App does not use any of the following:</p>
+        <ul lang="ja">
             <li>サードパーティ分析ツール（Firebase, Amplitude等）</li>
             <li>広告SDK</li>
             <li>トラッキングツール（ATT対象外）</li>
             <li>クラウドストレージ（iCloud同期含む）</li>
             <li>外部API・サーバー通信</li>
         </ul>
+        <ul lang="en">
+            <li>Third-party analytics tools (Firebase, Amplitude, etc.)</li>
+            <li>Advertising SDKs</li>
+            <li>Tracking tools (not subject to ATT)</li>
+            <li>Cloud storage (including iCloud sync)</li>
+            <li>External APIs or server communication</li>
+        </ul>
     </div>
 
+    <!-- 5. Apple Intelligence -->
     <div class="card">
         <h2>5. Apple Intelligence</h2>
-        <p>Apple Intelligence対応端末では、Appleが提供するon-device画像理解機能を利用して高精度な分類を行います。この処理もすべて端末内で完結し、Appleのサーバーにデータが送信されることはありません。</p>
+        <p lang="ja">Apple Intelligence対応端末では、Appleが提供するon-device画像理解機能を利用して高精度な分類を行います。この処理もすべて端末内で完結し、Appleのサーバーにデータが送信されることはありません。</p>
+        <p lang="en">On Apple Intelligence-capable devices, the App uses Apple's on-device image understanding for higher-accuracy classification. This processing is also performed entirely on-device — no data is sent to Apple's servers.</p>
     </div>
 
+    <!-- 6. 子供のプライバシー / Children's Privacy -->
     <div class="card">
-        <h2>6. 子供のプライバシー</h2>
-        <p>本アプリは13歳未満の子供から個人情報を意図的に収集することはありません。そもそもいかなるユーザーからも個人情報を収集しません。</p>
+        <h2 lang="ja">6. 子供のプライバシー</h2>
+        <h2 lang="en">6. Children's Privacy</h2>
+        <p lang="ja">本アプリは13歳未満の子供から個人情報を意図的に収集することはありません。そもそもいかなるユーザーからも個人情報を収集しません。</p>
+        <p lang="en">The App does not intentionally collect personal information from children under 13. In fact, it does not collect personal information from any user.</p>
     </div>
 
+    <!-- 7. ポリシーの変更 / Changes -->
     <div class="card">
-        <h2>7. プライバシーポリシーの変更</h2>
-        <p>本ポリシーは必要に応じて更新される場合があります。重要な変更がある場合は、本ページにて通知します。</p>
+        <h2 lang="ja">7. プライバシーポリシーの変更</h2>
+        <h2 lang="en">7. Changes to This Policy</h2>
+        <p lang="ja">本ポリシーは必要に応じて更新される場合があります。重要な変更がある場合は、本ページにて通知します。</p>
+        <p lang="en">This policy may be updated as needed. Significant changes will be communicated on this page.</p>
     </div>
 
+    <!-- 8. お問い合わせ / Contact -->
     <div class="card">
-        <h2>8. お問い合わせ</h2>
-        <p>プライバシーに関するご質問・ご懸念がございましたら、以下までご連絡ください。</p>
-        <p><strong>メール:</strong> <a href="mailto:your-email@example.com" style="color: var(--primary);">your-email@example.com</a></p>
+        <h2 lang="ja">8. お問い合わせ</h2>
+        <h2 lang="en">8. Contact</h2>
+        <p lang="ja">プライバシーに関するご質問・ご懸念がございましたら、以下までご連絡ください。</p>
+        <p lang="en">If you have any privacy-related questions or concerns, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:your-email@example.com" style="color: var(--primary);">your-email@example.com</a></p>
     </div>
 </div>
 
 <footer>
     <p>&copy; 2026 Scrappy. All rights reserved.</p>
-    <p><a href="index.html" style="color: var(--primary);">サポートページ</a></p>
+    <p lang="ja"><a href="index.html" style="color: var(--primary);">サポートページ</a></p>
+    <p lang="en"><a href="index.html" style="color: var(--primary);">Support Page</a></p>
 </footer>
+
+<script>
+    function toggleLang() {
+        const jaEls = document.querySelectorAll('[lang="ja"]');
+        const enEls = document.querySelectorAll('[lang="en"]');
+        const isJa = jaEls[0].style.display !== 'none';
+        jaEls.forEach(el => el.style.display = isJa ? 'none' : '');
+        enEls.forEach(el => el.style.display = isJa ? '' : 'none');
+        document.documentElement.lang = isJa ? 'en' : 'ja';
+    }
+    if (!navigator.language.startsWith('ja')) {
+        toggleLang();
+    }
+</script>
 
 </body>
 </html>
