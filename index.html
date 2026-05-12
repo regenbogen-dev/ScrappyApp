@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="lang-ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,7 +120,8 @@
             font-weight: 600;
         }
         .lang-switch button:hover { background: var(--primary); color: #fff; }
-        [lang="en"] { display: none; }
+        html.lang-ja [lang="en"] { display: none !important; }
+        html.lang-en [lang="ja"] { display: none !important; }
     </style>
 </head>
 <body>
@@ -318,14 +319,11 @@
 
 <script>
     function toggleLang() {
-        const jaEls = document.querySelectorAll('[lang="ja"]');
-        const enEls = document.querySelectorAll('[lang="en"]');
-        const isJa = jaEls[0].style.display !== 'none';
-        jaEls.forEach(el => el.style.display = isJa ? 'none' : '');
-        enEls.forEach(el => el.style.display = isJa ? '' : 'none');
-        document.documentElement.lang = isJa ? 'en' : 'ja';
+        const root = document.documentElement;
+        const isJa = root.classList.contains('lang-ja');
+        root.classList.replace(isJa ? 'lang-ja' : 'lang-en', isJa ? 'lang-en' : 'lang-ja');
+        root.lang = isJa ? 'en' : 'ja';
     }
-    // Auto-detect browser language
     if (!navigator.language.startsWith('ja')) {
         toggleLang();
     }
